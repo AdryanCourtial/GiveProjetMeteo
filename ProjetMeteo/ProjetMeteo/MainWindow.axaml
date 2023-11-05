@@ -1,0 +1,174 @@
+
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProjetMeteo.MainWindow"
+        Title="ProjetMeteo">
+        <Window.Styles>
+                <Styles>
+                        <Style Selector="Window">
+                                <Setter Property="Background">
+                                        <ImageBrush Stretch="UniformToFill" Source="\Assets\background.png" /> 
+                                </Setter>
+                        </Style>
+                </Styles>
+        </Window.Styles>
+        <TabControl>
+                <TabItem Header="Recherche">
+                        <StackPanel Orientation="Vertical">
+                                <TextBlock Foreground="Red" Name="output_rechercher" HorizontalAlignment="Right" TextAlignment="Center">  </TextBlock>
+                                <StackPanel HorizontalAlignment="Center">
+                                        <TextBox Name="input_ville" TextAlignment="Center" Width="200" Height="30" />
+                                        <Button Name="envoyer_ville" HorizontalContentAlignment="Center" Width="200" Height="50" Click="BoutonEnvoyer" Content="Recherche"/>
+                                </StackPanel>
+                                <StackPanel Margin="0,150,0,0">
+                                        <TextBlock FontSize="40" TextAlignment="Center"> Nom de Ville</TextBlock>
+                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">    
+                                                <TextBlock FontSize="60" TextAlignment="Center"> 19 </TextBlock>
+                                                <TextBlock FontSize="60" Margin="2,0,0,0" TextAlignment="Center"> °C </TextBlock>
+                                        </StackPanel>
+                                </StackPanel>
+                                <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal" >
+                                        <TextBlock TextAlignment="Center" > Description du temps </TextBlock>
+                                        <TextBlock TextAlignment="Center" > IMAGE </TextBlock>
+                                </StackPanel>
+                                <TextBlock TextAlignment="Center" > Latitude  et Longitude</TextBlock>
+                                <TextBlock TextAlignment="Center" > Humidite </TextBlock>
+                        </StackPanel>
+                </TabItem>
+                <TabItem Header="Prévision">
+                        <StackPanel>
+                                <TextBlock Foreground="Red" Name="output_pre" HorizontalAlignment="Right" TextAlignment="Center">  </TextBlock>
+                                <StackPanel HorizontalAlignment="Center" Margin="0,0,0,0">
+                                        <TextBox Name="input_ville_pre" TextAlignment="Center" Width="200" Height="30" />
+                                        <Button Name="envoyer_ville_pre" HorizontalContentAlignment="Center" Width="200" Height="50" Click="BoutonEnvoyerPre" Content="Recherche"/>
+                                </StackPanel>
+                                
+                        <Grid Margin="0,150,0,0">
+                                <Grid.RowDefinitions>
+                                        <RowDefinition Height="300"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0" >
+                                        <StackPanel HorizontalAlignment="Center">
+                                                <StackPanel >
+                                                        <TextBlock FontSize="40" TextAlignment="Center"> Nom de Ville</TextBlock>
+                                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">    
+                                                                <TextBlock FontSize="60" TextAlignment="Center"> 19 </TextBlock>
+                                                                <TextBlock FontSize="60" Margin="2,0,0,0" TextAlignment="Center"> °C </TextBlock>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <TextBlock TextAlignment="Center" > Description du temps </TextBlock>
+                                                <TextBlock TextAlignment="Center" Margin="0,25,0,25"> IMAGE </TextBlock>
+                                                <TextBlock TextAlignment="Center" > Latitude  et Longitude</TextBlock>
+                                                <TextBlock TextAlignment="Center" > Humidite </TextBlock>
+                                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                                        <TextBlock TextAlignment="Center" > Date  </TextBlock>
+                                                        <TextBlock TextAlignment="Center" Margin="10,0,0,0"> 12:00  </TextBlock>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" >
+                                        <StackPanel HorizontalAlignment="Center">
+                                                <StackPanel >
+                                                        <TextBlock FontSize="40" TextAlignment="Center"> Nom de Ville</TextBlock>
+                                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">    
+                                                                <TextBlock FontSize="60" TextAlignment="Center"> 19 </TextBlock>
+                                                                <TextBlock FontSize="60" Margin="2,0,0,0" TextAlignment="Center"> °C </TextBlock>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <TextBlock TextAlignment="Center" > Description du temps </TextBlock>
+                                                <TextBlock TextAlignment="Center" Margin="0,25,0,25"> IMAGE </TextBlock>
+                                                <TextBlock TextAlignment="Center" > Latitude  et Longitude</TextBlock>
+                                                <TextBlock TextAlignment="Center" > Humidite </TextBlock>
+                                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                                        <TextBlock TextAlignment="Center" > Date  </TextBlock>
+                                                        <TextBlock TextAlignment="Center" Margin="10,0,0,0"> 12:00  </TextBlock>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" >
+                                        <StackPanel HorizontalAlignment="Center">
+                                                <StackPanel >
+                                                        <TextBlock FontSize="40" TextAlignment="Center"> Nom de Ville</TextBlock>
+                                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">    
+                                                                <TextBlock FontSize="60" TextAlignment="Center"> 19 </TextBlock>
+                                                                <TextBlock FontSize="60" Margin="2,0,0,0" TextAlignment="Center"> °C </TextBlock>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <TextBlock TextAlignment="Center" > Description du temps </TextBlock>
+                                                <TextBlock TextAlignment="Center" Margin="0,25,0,25"> IMAGE </TextBlock>
+                                                <TextBlock TextAlignment="Center" > Latitude  et Longitude</TextBlock>
+                                                <TextBlock TextAlignment="Center" > Humidite </TextBlock>
+                                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                                        <TextBlock TextAlignment="Center" > Date  </TextBlock>
+                                                        <TextBlock TextAlignment="Center" Margin="10,0,0,0"> 12:00  </TextBlock>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3" >
+                                        <StackPanel HorizontalAlignment="Center">
+                                                <StackPanel >
+                                                        <TextBlock FontSize="40" TextAlignment="Center"> Nom de Ville</TextBlock>
+                                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">    
+                                                                <TextBlock FontSize="60" TextAlignment="Center"> 19 </TextBlock>
+                                                                <TextBlock FontSize="60" Margin="2,0,0,0" TextAlignment="Center"> °C </TextBlock>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <TextBlock TextAlignment="Center" > Description du temps </TextBlock>
+                                                <TextBlock TextAlignment="Center" Margin="0,25,0,25"> IMAGE </TextBlock>
+                                                <TextBlock TextAlignment="Center" > Latitude  et Longitude</TextBlock>
+                                                <TextBlock TextAlignment="Center" > Humidite </TextBlock>
+                                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                                        <TextBlock TextAlignment="Center" > Date  </TextBlock>
+                                                        <TextBlock TextAlignment="Center" Margin="10,0,0,0"> 12:00  </TextBlock>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4" >
+                                        <StackPanel HorizontalAlignment="Center">
+                                                <StackPanel >
+                                                        <TextBlock FontSize="40" TextAlignment="Center"> Nom de Ville</TextBlock>
+                                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">    
+                                                                <TextBlock FontSize="60" TextAlignment="Center"> 19 </TextBlock>
+                                                                <TextBlock FontSize="60" Margin="2,0,0,0" TextAlignment="Center"> °C </TextBlock>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <TextBlock TextAlignment="Center" > Description du temps </TextBlock>
+                                                <TextBlock TextAlignment="Center" Margin="0,25,0,25"> IMAGE </TextBlock>
+                                                <TextBlock TextAlignment="Center" > Latitude  et Longitude</TextBlock>
+                                                <TextBlock TextAlignment="Center" > Humidite </TextBlock>
+                                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                                        <TextBlock TextAlignment="Center" > Date  </TextBlock>
+                                                        <TextBlock TextAlignment="Center" Margin="10,0,0,0"> 12:00  </TextBlock>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </Border>
+                        </Grid>
+                        </StackPanel>
+                </TabItem>
+                <TabItem Header="Parametre">
+                        <StackPanel Orientation="Vertical">
+                                <TextBlock Foreground="Red" Name="output_option" HorizontalAlignment="Right" TextAlignment="Center">  </TextBlock>
+                                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                                        <TextBox Name="input_ville_option" Width="200" Height="30">  </TextBox>
+                                        <Button Name="envoyer_ville_option" HorizontalContentAlignment="Center" Width="200" Height="30" Click="BoutonEnvoyerOption" Content="Ajouter par Default"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                <TextBlock> Ville par Default : </TextBlock>
+                                <TextBlock Margin="5,0,0,0" Name="input_ville_default"> Ville ?</TextBlock>
+                                </StackPanel>
+                        </StackPanel>
+                </TabItem>
+        </TabControl>
+</Window>
